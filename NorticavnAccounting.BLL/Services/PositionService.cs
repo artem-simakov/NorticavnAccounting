@@ -67,7 +67,7 @@ public class PositionService : IPositionService
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
-        var result = _mapper.Map<PositionDto>(position);
+        var result = _mapper.Map<PositionDto>(model);
 
         return result;
     }
