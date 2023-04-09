@@ -76,9 +76,7 @@ public class EmployeeService : IEmployeeService
                     .ToArray();
 
                 model.Positions.Clear();
-
-                foreach (var position in positions)
-                    model.Positions.Add(position);
+                model.Positions = positions;
             }
 
             _dbContext.Employees.Update(model);
